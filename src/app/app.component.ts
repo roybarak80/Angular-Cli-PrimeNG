@@ -1,11 +1,11 @@
         import { Component } from '@angular/core';
-        import {PanelMenuModule, MenuItem} from 'primeng/primeng';
-
+        import {MenubarModule,MenuItem} from 'primeng/primeng';
 
         @Component({
           selector: 'app-root',
-          template: `<button pButton type="button" (click)="onclick()" label="Click"></button>
-          <p-panelMenu [model]="items" [style]="{'width':'300px'}"></p-panelMenu>
+          template: `
+          <p-menubar [model]="items"></p-menubar>
+          <button pButton type="button" (click)="onclick()" label="Click"></button>
         
           `,
         })
@@ -30,6 +30,7 @@
                   ]
                 },
                   {label: 'Open'},
+                  {separator: true},
                   {label: 'Quit'}
                 ]
               },
@@ -86,6 +87,9 @@
                     ]
                   }
                 ]
+              },
+              {
+                label: 'Quit', icon: 'fa-minus'
               }
             ];
           }

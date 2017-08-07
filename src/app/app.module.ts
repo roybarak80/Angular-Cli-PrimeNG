@@ -6,7 +6,7 @@
         import { HttpModule } from '@angular/http';
         import {ButtonModule} from 'primeng/primeng';
         import { RouterModule } from '@angular/router';
-        import {PanelMenuModule} from 'primeng/primeng';
+        import {MenubarModule} from 'primeng/primeng';
         import { AppComponent } from './app.component';
 
         @NgModule({
@@ -21,7 +21,7 @@
             ButtonModule,
             CommonModule,
             RouterModule,
-            PanelMenuModule,
+            MenubarModule,
           ],
           providers: [],
           bootstrap: [AppComponent]
